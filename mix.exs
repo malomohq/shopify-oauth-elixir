@@ -4,11 +4,12 @@ defmodule Shopify.OAuth.MixProject do
   def project do
     [
       app: :shopify_oauth,
-      version: "0.0.0",
+      version: "1.0.0",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      dialyzer: dialyzer()
+      dialyzer: dialyzer(),
+      package: package()
     ]
   end
 
@@ -43,5 +44,17 @@ defmodule Shopify.OAuth.MixProject do
       plt_add_apps: [:hackney],
       plt_core_path: "./_build/#{Mix.env()}"
     ]
+  end
+
+  defp package do
+    %{
+      description: "Elixir client for the Shopify OAuth API",
+      maintainers: ["Anthony Smith"],
+      licenses: ["MIT"],
+      links: %{
+        GitHub: "https://github.com/malomohq/shopify-oauth-elixir",
+        "Made by Malomo - Post-purchase experiences that customers love": "https://gomalomo.com"
+      }
+    }
   end
 end
