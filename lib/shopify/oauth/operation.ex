@@ -6,5 +6,5 @@ defmodule Shopify.OAuth.Operation do
             path: String.t()
           }
 
-  defstruct method: nil, pararms: %{}, path: nil
+  defstruct method: nil, params: %{}, path: nil
 end
