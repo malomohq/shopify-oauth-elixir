@@ -20,7 +20,13 @@ defmodule Shopify.OAuth.MixProject do
   defp deps do
     [
       { :hackney, "~> 1.15", optional: true },
-      { :jason, "~> 1.1", optional: true }
+      { :jason, "~> 1.1", optional: true },
+
+      #
+      # dev
+      #
+
+      { :dialyxir, "~> 1.0-rc", only: :dev, runtime: false }
     ]
   end
 end
