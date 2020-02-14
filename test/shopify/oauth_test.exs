@@ -1,6 +1,16 @@
 defmodule Shopify.OAuthTest do
   use ExUnit.Case, async: true
 
+  alias Shopify.OAuth.{ Operation }
+
+  test "create_access_token/1" do
+    params = %{ client_id: "💩", client_secret: "💩", code: "💩" }
+
+    expected = %Operation{ method: :post, params: params, path: "/oauth/access_token" }
+
+    assert ^expected = Shopify.OAuth.create_access_token(params)
+  end
+
   test "verify_hmac/2" do
     query = "code=0907a61c0c8d55e99db179b68161bc00&hmac=700e2dadb827fcc8609e9d5ce208b2e9cdaab9df07390d2cbca10d7c328fc4bf&shop=some-shop.myshopify.com&state=0.6784241404160823&timestamp=1337178173"
 
