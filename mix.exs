@@ -28,7 +28,13 @@ defmodule Shopify.OAuth.MixProject do
       #
 
       { :dialyxir, "~> 1.0-rc", only: :dev, runtime: false },
-      { :ex_doc, ">= 0.0.0", only: :dev, runtime: false }
+      { :ex_doc, ">= 0.0.0", only: :dev, runtime: false },
+
+      #
+      # test
+      #
+
+      { :bypass, "~> 1.0", only: :test }
     ]
   end
 
