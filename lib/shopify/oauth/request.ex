@@ -1,6 +1,11 @@
 defmodule Shopify.OAuth.Request do
   alias Shopify.OAuth.{ Config, Helpers, Operation, Response }
 
+  @spec send(Operation.t(), Config.t()) :: Shopify.OAuth.response_t()
+  def send(operation, config) do
+    send(operation, config, %{})
+  end
+
   @spec send(Operation.t(), Config.t(), map) :: Shopify.OAuth.response_t()
   def send(operation, %{ retry: true } = config, private) do
     private = Map.put_new(private, :attempts, 0)
@@ -32,7 +37,7 @@ defmodule Shopify.OAuth.Request do
     headers = [{ "content-type", "application/json" }] ++ config.headers
 
     method = operation.method
-    
+
     url = Helpers.URL.to_string(operation, config)
 
     result =
