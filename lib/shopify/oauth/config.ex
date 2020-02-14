@@ -26,7 +26,7 @@ defmodule Shopify.OAuth.Config do
             shop: nil
 
   @spec new(map | t) :: t
-  def new(config) do
+  def new(config \\ %{}) do
     struct(%__MODULE__{}, config)
   end
 end
