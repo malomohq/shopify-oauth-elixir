@@ -67,7 +67,7 @@ Configuration is passed as a map to the second argument of
 * `:port` - the HTTP port used when making a request
 * `:protocol` - the HTTP protocol used when making a request. Defaults to
   `https`.
-* `:retry` - whether to automatically retry failed API calls. May bee `true` or
+* `:retry` - whether to automatically retry failed API calls. May be `true` or
   `false`. Defaults to `false`.
 * `:retry_opts` - options used when performing retries. Defaults to `[]`.
   * `:max_attempts` - the maximum number of retry attempts. Defaults to `3`.
