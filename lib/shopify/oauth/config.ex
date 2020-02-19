@@ -25,7 +25,7 @@ defmodule Shopify.OAuth.Config do
             retry_opts: [],
             shop: nil
 
-  @spec new(map | t) :: t
+  @spec new(map) :: t
   def new(config \\ %{}) do
     struct(%__MODULE__{}, config)
   end

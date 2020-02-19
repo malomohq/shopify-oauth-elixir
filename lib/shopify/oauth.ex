@@ -18,7 +18,7 @@ defmodule Shopify.OAuth do
   @doc """
   Send a request to Shopify.
   """
-  @spec request(Operation.t(), Config.t()) :: response_t
+  @spec request(Operation.t(), map) :: response_t
   def request(operation, config) do
     Request.send(operation, Config.new(config))
   end
