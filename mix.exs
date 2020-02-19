@@ -4,7 +4,7 @@ defmodule Shopify.OAuth.MixProject do
   def project do
     [
       app: :shopify_oauth,
-      version: "1.0.0",
+      version: "1.0.1",
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
