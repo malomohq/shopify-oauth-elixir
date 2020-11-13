@@ -35,7 +35,7 @@ defmodule Shopify.OAuth.MixProject do
       # test
       #
 
-      { :bypass, "~> 1.0", only: :test }
+      { :bypass, "~> 2.1", only: :test }
     ]
   end
 
