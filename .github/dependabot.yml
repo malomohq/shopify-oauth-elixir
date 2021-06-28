@@ -1,11 +1,13 @@
 version: 2
+
 updates:
-- package-ecosystem: mix
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 10
-  ignore:
-  - dependency-name: hackney
-    versions:
-    - 1.17.0
+  - package-ecosystem: mix
+
+    directory: "/"
+
+    schedule:
+      interval: daily
+
+    open-pull-requests-limit: 10
+
+    target-branch: master
